@@ -27,7 +27,7 @@ const ProfilePage = () => {
   };
 
   const goToCommunities = () => {
-    navigate('/communities');  // Função para navegar até a página de communities
+    navigate('/communities');  // Navega para a página de comunidades
   };
 
   const handleScrollLeft = () => {
@@ -66,7 +66,7 @@ const ProfilePage = () => {
         <div className="profile-card">
           <div className="profile-info">
             <div className="avatar-edit-container">
-              <img src={avatar === 'abraxoslaranja' ? 'abraxoslaranja.png' : avatar === 'abraxosazul' ? 'abraxosazul.png' : avatar === 'abraxosroxo' ? 'abraxosroxo.png' : avatar === 'abraxospreto' ? 'abraxospreto.png' : 'fotoperfil.png'} alt="Profile" className="avatar" />
+              <img src={avatar} alt="Profile" className="avatar" />
               <button className="edit-avatar-button" onClick={goToAvatar}>
                 <img src="lapiseditar.png" alt="Edit Icon" className="edit-icon" />
               </button>
@@ -77,18 +77,16 @@ const ProfilePage = () => {
                 <span className="community-number">0</span>
                 <h2 className="communities-title">Comunidades</h2>
               </div>
-              <button className="explore-button">Explorar</button>
+              <button className="explore-button" onClick={goToCommunities}>Explorar</button>
             </div>
             <div className="divider-line"></div>
             
-            {/* Mensagem para Comunidades Favoritas */}
             <div className="favorite-communities-container">
               <p className="no-favorites-message">Favorite uma comunidade e ela aparecerá aqui, experimente!</p>
             </div>
 
             <div className="divider-line recommendations"></div>
 
-            {/* Carrossel com Botões de Navegação */}
             <div className="carousel-container">
               <button className="carousel-button left" onClick={handleScrollLeft}>
                 <img src="esquerda.png" alt="Scroll Left" />
