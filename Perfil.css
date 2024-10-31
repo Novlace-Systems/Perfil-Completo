@@ -281,8 +281,9 @@
 .no-favorites-message {
   font-weight: bold;
   text-align: center;
-  color: black;
-  font-size: 0.6rem;
+  color: #330066; /* Mesma cor de Rayssa Maravilhosa */
+  font-size: 1rem; /* Tamanho ajustado para ser semelhante */
+  font-family: 'Quicksand', sans-serif; /* Mesma fonte de Rayssa Maravilhosa */
   margin-top: 20px;
 }
 
